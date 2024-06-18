@@ -79,7 +79,6 @@ function page3Animation(){
         scrollTrigger: {
             trigger: "#section-part3",
             scroller: "body",
-            markers: true,
             start: "top 50%",
             scrub:2,
         }
@@ -109,24 +108,12 @@ function page3Animation(){
         opacity: 0,
         duartion: 0.5,
     })
-    tl3.from(".case-study-boxes.middle",{
-        y:-100,
-        opacity:0,
-        duration:0.5,
-    })
-    tl3.from(".case-study-boxes.left",{
-        x:300,
-        opacity:0,
-        duration:0.5,
-    },"fan")
-    tl3.from(".case-study-boxes.right",{
-        x:-300,
-        opacity:0,
-        duration:0.5,
-    },"fan")
+    
 }
+
+
 
 page1Animation();
 page2Animation();
 page3Animation();
-
+page4Animation()
