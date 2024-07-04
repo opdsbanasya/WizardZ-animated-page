@@ -47,32 +47,34 @@ function page2Animation(){
     tl2.from("#service", {
         x: -50,
         opacity: 0,
-        duartion: 0.5,
+        duration: 0.5,
     })
     tl2.from(".adsbox2.left",{
         x: -50,
         opacity:0,
-        duartion:1
+        duration:1
     },"ram")
     tl2.from(".adsbox1.right",{
         x: 50,
         opacity:0,
-        duartion:1
+        duration:1
     },"ram")
     //* yha same var pass krne se dono sath sath chalenge
     
     tl2.from(".adsbox1.left",{
         x: -50,
         opacity:0,
-        duartion:1
+        duration:1
     },"oggy")
     tl2.from(".adsbox2.right",{
         x: 50,
         opacity:0,
-        duartion:1
+        duration:1
     },"oggy")
     
 }
+
+page2Animation();
 
 function page3Animation(){
     var tl3 = gsap.timeline({
@@ -103,17 +105,41 @@ function page3Animation(){
         opacity:0,
         duration:0.5,
     },"-=0.5")
-    tl3.from("#case-study", {
+    
+}
+function page4Animation(){
+    var tl4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#section4",
+            scroller: "body",
+            start: "top 90%",
+            end: "top 10%",
+            scrub: 2,
+        }
+    });
+    tl4.from("#case-study", {
         x: -50,
         opacity: 0,
         duartion: 0.5,
     })
-    
+    tl4.from(".middle",{
+        y: -100,
+        opacity:0,
+        duration:1,
+    });
+    tl4.from(".left",{
+        x:100,
+        opacity:0,
+        duration:1,
+    },"case");
+    tl4.from(".right",{
+        x:-100,
+        opacity:0,
+        duration:1,
+    },"case");
 }
 
-
-
+page4Animation();
 page1Animation();
 page2Animation();
 page3Animation();
-page4Animation();
